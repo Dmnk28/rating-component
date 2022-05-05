@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  background-color: #0d0d12;
+  color: #81889a;
+  min-height: 90vh;
+}
+
+main {
+  background-color: #1d222e;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: clamp(350px, 40vw, 450px);
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.chip {
+  border: none;
+  border-radius: 5rem;
+}
+
+form.rating-ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form.rating-ui .rating-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+form.rating-ui .rating-btns .star-btn {
+  padding: 0 1rem;
+  border: none;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+  background-color: #242b35;
+}
+form.rating-ui .rating-btns .star-btn:hover {
+  background-color: #e47e00;
+}
+form.rating-ui .rating-btns .star-btn:active {
+  background-color: #81889a;
+}
+form.rating-ui .submit-btn {
+  width: 100%;
+  background-color: #ffffff;
+  color: #e47e00;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */

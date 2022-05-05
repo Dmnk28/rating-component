@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Rating Component</title>
+
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 </head>
 <body>
-    
+    <main>
+        <div class="card">
+            <div class="icon">
+                <img src="./images/icon-star.svg" alt="">
+            </div>
+            <div class="rating-chip"></div>
+            <h1 class="card-heading">
+                How did we do?
+            </h1>
+            <p class="card-text">
+                Please let us know how we did with your support request. All feedback is appreciated 
+                to help us improve our offering!
+            </p>
+        </div>
+        <form class="rating-ui">
+            <div class="rating-btns">
+                <button class="star-btn" value="1">1</button>
+                <button class="star-btn" value="2">2</button>
+                <button class="star-btn" value="3">3</button>
+                <button class="star-btn" value="4">4</button>
+                <button class="star-btn" value="5">5</button>
+            </div>            
+            <button class="chip submit-btn" type="submit">Submit</button>
+        </form>
+    </main>
+
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
