@@ -9,6 +9,10 @@ $clr-bg-dark: #0d0d12;
 $clr-bg-ui-inactive: #242b35;
 $clr-bg-headline-chip: #22282f;
 
+@mixin transitions {
+    transition: all .5s ease-in-out;
+    transition-property: background-color, color;
+}
 
 body {
     display: flex;
@@ -57,12 +61,17 @@ form {
                 justify-content: center;
                 align-content: center;
                 background-color: $clr-bg-ui-inactive;
+                color: $clr-secondary;
+                @include transitions();
 
                 &:hover {
+                    cursor: pointer;
                     background-color: $clr-primary;
+                    color: $clr-tertiary;
                 }
 
-                &:active {
+                &.selected {
+                    color: $clr-tertiary;
                     background-color: $clr-secondary;
                 }
             }
@@ -70,11 +79,18 @@ form {
 
         .submit-btn {
             width: 100%;
-            background-color: $clr-tertiary;
-            color: $clr-primary;
+            background-color: $clr-primary;
+            color: $clr-tertiary;
             padding: 1rem 2rem;
             text-transform: uppercase;
             font-weight: 700;
+            @include transitions();
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $clr-tertiary;
+                color: $clr-primary;    
+            }
         }
     }
 }

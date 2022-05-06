@@ -42,18 +42,31 @@ form.rating-ui .rating-btns .star-btn {
   justify-content: center;
   align-content: center;
   background-color: #242b35;
+  color: #81889a;
+  transition: all 0.5s ease-in-out;
+  transition-property: background-color, color;
 }
 form.rating-ui .rating-btns .star-btn:hover {
+  cursor: pointer;
   background-color: #e47e00;
+  color: #ffffff;
 }
-form.rating-ui .rating-btns .star-btn:active {
+form.rating-ui .rating-btns .star-btn.selected {
+  color: #ffffff;
   background-color: #81889a;
 }
 form.rating-ui .submit-btn {
   width: 100%;
-  background-color: #ffffff;
-  color: #e47e00;
+  background-color: #e47e00;
+  color: #ffffff;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
+  transition-property: background-color, color;
+}
+form.rating-ui .submit-btn:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #e47e00;
 }/*# sourceMappingURL=main.css.map */
