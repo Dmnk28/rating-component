@@ -23,20 +23,26 @@ h1 {
   border-radius: 5rem;
 }
 
-form.rating-ui {
+#card.centered {
+  justify-content: center;
+  text-align: center;
+}
+
+form#rating-ui {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-form.rating-ui .rating-btns {
+form#rating-ui .rating-btns {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 1rem;
 }
-form.rating-ui .rating-btns .star-btn {
+form#rating-ui .rating-btns .star-btn {
   padding: 0 1rem;
   border: none;
+  width: 4rem;
   aspect-ratio: 1;
   border-radius: 50%;
   justify-content: center;
@@ -46,16 +52,16 @@ form.rating-ui .rating-btns .star-btn {
   transition: all 0.5s ease-in-out;
   transition-property: background-color, color;
 }
-form.rating-ui .rating-btns .star-btn:hover {
+form#rating-ui .rating-btns .star-btn:hover {
   cursor: pointer;
   background-color: #e47e00;
   color: #ffffff;
 }
-form.rating-ui .rating-btns .star-btn.selected {
+form#rating-ui .rating-btns .star-btn.selected {
   color: #ffffff;
   background-color: #81889a;
 }
-form.rating-ui .submit-btn {
+form#rating-ui .submit-btn {
   width: 100%;
   background-color: #e47e00;
   color: #ffffff;
@@ -65,7 +71,7 @@ form.rating-ui .submit-btn {
   transition: all 0.5s ease-in-out;
   transition-property: background-color, color;
 }
-form.rating-ui .submit-btn:hover {
+form#rating-ui .submit-btn:hover {
   cursor: pointer;
   background-color: #ffffff;
   color: #e47e00;
