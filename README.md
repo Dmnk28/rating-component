@@ -13,7 +13,7 @@ Users should be able to:
 
 ## Solution Screenshot
 
-![Screenshot of my Solution](./screenshot_solution.jpg)
+![Screenshot of my Solution](./screenshot_solution.png)
 
 ## Links
 
