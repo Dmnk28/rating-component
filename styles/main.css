@@ -1,21 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 body {
   display: flex;
   place-content: center;
   align-items: center;
-  background-color: #0d0d12;
-  color: #81889a;
+  background-color: hsl(216deg, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  color: hsl(217deg, 12%, 63%);
   min-height: 90vh;
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1.5rem);
+}
+
+.flow--space-small {
+  --flow-space: 0.5rem;
+}
+
+.flow--space-big {
+  --flow-space: 2rem;
+}
+
 main {
-  background-color: #1d222e;
-  border-radius: 1rem;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 2rem;
   padding: 2rem;
-  width: clamp(350px, 40vw, 450px);
+  width: clamp(350px, 30vw, 450px);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-block: 0;
 }
 
 h1 {
-  color: #ffffff;
+  --flow-space: 2rem;
+  margin-bottom: 0;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+}
+
+p {
+  --flow-space: 0.5rem;
 }
 
 .chip {
@@ -23,11 +49,38 @@ h1 {
   border-radius: 5rem;
 }
 
+#card {
+  display: flex;
+  flex-direction: column;
+}
 #card.centered {
   justify-content: center;
   text-align: center;
 }
+#card .thank-you-image {
+  margin: auto;
+}
+#card .star-icon {
+  display: flex;
+  padding: 1rem;
+  border: none;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+  background-color: hsla(216deg, 12%, 54%, 0.123);
+}
+#card #rating-chip {
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsla(216deg, 12%, 54%, 0.123);
+}
 
+form {
+  margin-top: 1.5rem;
+}
 form#rating-ui {
   display: flex;
   flex-direction: column;
@@ -36,35 +89,34 @@ form#rating-ui {
 form#rating-ui .rating-btns {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 1rem;
+  justify-content: space-between;
 }
 form#rating-ui .rating-btns .star-btn {
   padding: 0 1rem;
   border: none;
-  width: 4rem;
+  width: 3.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
   justify-content: center;
   align-content: center;
-  background-color: #242b35;
-  color: #81889a;
+  background-color: hsla(216deg, 12%, 54%, 0.123);
+  color: hsl(217deg, 12%, 63%);
   transition: all 0.5s ease-in-out;
   transition-property: background-color, color;
 }
 form#rating-ui .rating-btns .star-btn:hover {
   cursor: pointer;
-  background-color: #e47e00;
-  color: #ffffff;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
 }
 form#rating-ui .rating-btns .star-btn.selected {
-  color: #ffffff;
-  background-color: #81889a;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(217deg, 12%, 63%);
 }
 form#rating-ui .submit-btn {
   width: 100%;
-  background-color: #e47e00;
-  color: #ffffff;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -73,6 +125,6 @@ form#rating-ui .submit-btn {
 }
 form#rating-ui .submit-btn:hover {
   cursor: pointer;
-  background-color: #ffffff;
-  color: #e47e00;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
 }/*# sourceMappingURL=main.css.map */

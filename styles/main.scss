@@ -1,13 +1,14 @@
 
-$clr-primary: #e47e00;
-$clr-secondary: #81889a;
-$clr-tertiary: #ffffff;
+$clr-primary: hsl(25, 97%, 53%);
+$clr-secondary: hsl(217, 12%, 63%);
+$clr-tertiary: hsl(0, 0%, 100%);
 
-$clr-bg-light: #1d222e;
-$clr-bg-dark: #0d0d12;
+$clr-bg-light: hsl(213, 19%, 18%);
+$clr-bg-dark: hsl(216, 12%, 8%);
 
-$clr-bg-ui-inactive: #242b35;
-$clr-bg-headline-chip: #22282f;
+$clr-bg-ui-inactive: hsla(216, 12%, 54%, 0.123);
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 @mixin transitions {
     transition: all .5s ease-in-out;
@@ -19,19 +20,45 @@ body {
     place-content: center;
     align-items: center;
     background-color: $clr-bg-dark;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
     color: $clr-secondary;
     min-height: 90vh;
 }
 
-main {
-    background-color: $clr-bg-light;
-    border-radius: 1rem;
-    padding: 2rem;
-    width: clamp(350px, 40vw, 450px);
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1.5rem);
+}
+  
+.flow--space-small {
+    --flow-space: 0.5rem;
 }
 
+.flow--space-big {
+    --flow-space: 2rem;
+}
+
+main {
+    background-color: $clr-bg-light;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: clamp(350px, 30vw, 450px);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-block: 0;
+}
+
+
 h1 {
+    --flow-space: 2rem;
+    margin-bottom: 0;
     color: $clr-tertiary;
+    font-weight: 700;
+}
+
+p {
+    --flow-space: 0.5rem;
 }
 
 .chip {
@@ -40,15 +67,40 @@ h1 {
 }
 
 #card {
+    display: flex;
+    flex-direction: column;
 
     &.centered {
         justify-content: center;
         text-align: center;
     }
+
+    .thank-you-image {
+        margin: auto;
+    }
+
+    .star-icon {
+        display: flex;
+        padding: 1rem;
+        border: none;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        justify-content: center;
+        align-content: center;
+        background-color: $clr-bg-ui-inactive;
+    }
+
+    #rating-chip {
+        margin-inline: auto;
+        padding: .5rem 1rem;
+        color: $clr-primary;
+        background-color: $clr-bg-ui-inactive;
+    }
 }
 
 form {
-    // width: 100%;
+    margin-top: 1.5rem;
 
     &#rating-ui {
         display: flex;
@@ -58,13 +110,12 @@ form {
         .rating-btns {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
-            margin-bottom: 1rem;
+            justify-content: space-between;
 
             .star-btn {
                 padding: 0 1rem;
                 border: none;
-                width: 4rem;
+                width: 3.5rem;
                 aspect-ratio: 1;
                 border-radius: 50%;
                 justify-content: center;
